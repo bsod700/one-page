@@ -1,0 +1,30 @@
+<!-- <p>admin works!</p>
+<p>הגדרת קונפיגים</p>
+<p>העלת קבצים</p>
+<p>שינוי טקסטים לעמודים</p>
+<p>אפשרות לראות ולערוך את עמודים?</p>
+<p>אם יש דאטה בייס אפשרות להוסיף ולמחוק דברים</p>
+אפשר לראות את האנשים שיצרו קשר יהיה DB של כל הרשומות
+
+-->
+
+<div class="admin-wapper">
+    <app-top-bar></app-top-bar>
+    <app-side-nave></app-side-nave>
+    <div class="content">
+        <table mat-table [dataSource]="dataSource" matSort (matSortChange)="announceSortChange($event)"
+       class="mat-elevation-z8">
+
+            <!-- Position Column -->
+            <ng-container [matColumnDef]="header" *ngFor="let header of tableObject.headers">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header [sortActionDescription]="'Sort by' + header">
+                {{header}}
+                </th>
+                <td mat-cell *matCellDef="let element"> {{element[header]}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="tableObject.headers"></tr>
+            <tr mat-row *matRowDef="let row; columns: tableObject.headers;"></tr>
+            </table>
+    </div>
+</div>

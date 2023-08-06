@@ -1,0 +1,17 @@
+{
+    "template": "default",
+    "brand": {
+        "title": "test",
+        "logo": "url",
+        "contact-info": {
+            "name": "",
+            "phone": "111111111",
+            "address": {
+                "city": "ranana",
+                "street": "moshe",
+                "number": 1
+            }
+
+        }
+    }
+}
